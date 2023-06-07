@@ -24,6 +24,9 @@ const fetchAllPlayers = async () => {
 
 const fetchSinglePlayer = async (playerId) => {
     try {
+        const response = await fetch(`${APIURL}players/${playerId}`);
+        const playerList = await response.json();
+        console.log(playerList);
 
     } catch (err) {
         console.error(`Oh no, trouble fetching player #${playerId}!`, err);
@@ -32,7 +35,7 @@ const fetchSinglePlayer = async (playerId) => {
 
 const addNewPlayer = async (playerObj) => {
     try {
-
+        
     } catch (err) {
         console.error('Oops, something went wrong with adding that player!', err);
     }
@@ -92,6 +95,7 @@ const renderNewPlayerForm = () => {
 
 const init = async () => {
     const players = await fetchAllPlayers();
+    fetchSinglePlayer(6327);
     renderAllPlayers(players);
 
     renderNewPlayerForm();
