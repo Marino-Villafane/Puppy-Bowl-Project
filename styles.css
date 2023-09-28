@@ -1,5 +1,133 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+/* Add these styles to your existing styles.css file */
+
+/* Player Card Styles */
+.player-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.player-card h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.player-card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.player-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.player-card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.player-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Player Details Styles */
+#player-details {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#player-details h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#player-details p {
+  color: #fff;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+#player-details button.close-button {
+  margin-top: 20px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#player-details button.close-button:hover {
+  background-color: #0056b3;
+}
+#player-form label,
+#player-form input,
+#player-form button {
+  margin: 8px 0;
+}
+
+/* Center the form and set its max width */
+#player-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Style the form elements */
+#player-form label {
+  font-weight: bold;
+}
+
+#player-form input[type="text"],
+#player-form input[type="url"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the submit button */
+#player-form button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#player-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Style form elements on focus/hover */
+#player-form input[type="text"]:focus,
+#player-form input[type="url"]:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
